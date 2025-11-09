@@ -22,7 +22,6 @@ def merge():
     df1['ms'] = df1['line_speed_actual'] * 0.01 / 60
     df1['secs'] = distance / df1['ms']
     df1['expected_end_time'] = df1['localizedtimestamp'] + pd.to_timedelta(df1['secs'], unit='s')
-
    
     merged_rows = []
     for i, row1 in df1.iterrows():
@@ -56,7 +55,7 @@ def xlsx_to_json():
     df = pd.read_excel('merged_output.xlsx')
     data_json = df.to_dict(orient='records')
     return jsonify({
-     "message": f"Successfully converted to JSON.",
+     "message": "Successfully converted to JSON.",
      "rows": len(data_json),
      "data": data_json
     })    

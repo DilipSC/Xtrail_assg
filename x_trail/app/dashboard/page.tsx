@@ -50,7 +50,7 @@ export default function Dashboard() {
       {!loading && data.length > 0 && (
         <div className="overflow-auto">
           <table className="border-collapse w-full text-sm border">
-            <thead className="bg-gray-200">
+            <thead className="bg-black">
               <tr>
                 {Object.keys(data[0]).map((key) => (
                   <th key={key} className="border p-2 text-left">{key}</th>
