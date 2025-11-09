@@ -41,8 +41,7 @@ def merge():
         })
 
     merged_df = pd.DataFrame(merged_rows)
-    output_file = 'merged_output.xlsx'
-    merged_df.to_excel(output_file, index=False)
+    merged_df.to_excel('merged_output.xlsx', index=False)
     return jsonify({
         "message": "Merge completed successfully.",
         "rows_merged": len(merged_df),
