@@ -54,9 +54,9 @@ def xlsx_to_json():
     df = pd.read_excel('merged_output.xlsx')
     data_json = df.to_dict(orient='records')
     return jsonify({
-     "message": "Successfully converted to JSON.",
-     "rows": len(data_json),
-     "data": data_json
+        "message": "Successfully converted to JSON.",
+        "rows": len(data_json),
+        "data": data_json
     })    
 
 
